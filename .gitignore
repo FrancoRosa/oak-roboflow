@@ -1,0 +1,58 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment directory
+venv/
+env/
+ENV/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.eggs/
+
+# Python-related cache files
+*.pyc
+*.pyo
+*.pyd
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+*.sql
+*.sqlite3
+
+# Jupyter Notebook files
+.ipynb_checkpoints
+
+# PyCharm IDE specific files
+.idea/
+
+# VSCode IDE specific files
+.vscode/
+
+# macOS specific files
+.DS_Store
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
