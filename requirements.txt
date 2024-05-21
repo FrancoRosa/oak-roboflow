@@ -1,3 +1,4 @@
 roboflowoak
 depthai
 opencv-python
+depthai-viewer
