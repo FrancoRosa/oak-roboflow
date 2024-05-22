@@ -38,8 +38,11 @@ def draw_predictions(frame, predictions, depth):
 
 if __name__ == '__main__':
     # instantiating an object (rf) with the RoboflowOak module
-    rf = RoboflowOak(model="trees-88tmr", confidence=0.05, overlap=0.5,
-                     version="3", api_key="i28RMMt0uydRjy7g8Pq0", rgb=True,
+    # rf = RoboflowOak(model="trees-88tmr", confidence=0.05, overlap=0.5,
+    #                  version="3", api_key="i28RMMt0uydRjy7g8Pq0", rgb=True,
+    #                  depth=True, device=None, blocking=True)
+    rf = RoboflowOak(model="rocks-kmf7f", confidence=0.05, overlap=0.5,
+                     version="2", api_key="i28RMMt0uydRjy7g8Pq0", rgb=True,
                      depth=True, device=None, blocking=True)
     # Running our model and displaying the video output with detections
     while True:
@@ -54,15 +57,16 @@ if __name__ == '__main__':
         # timing: for benchmarking purposes
         t = time.time() - t0
         print("FPS ", 1 / t)
-        print("PREDICTIONS ", [p for p in predictions])
+        print("PREDICTIONS ", [p.json() for p in predictions])
 
         # setting parameters for depth calculation
         # comment out the following 2 lines out if you're using an OAK without Depth
-        if depth is not None:
-            max_depth = np.amax(depth)
-            cv2.imshow("depth", depth / max_depth)
+        # if depth is not None:
+            # max_depth = np.amax(depth)
+            # cv2.imshow("depth", depth / max_depth)
 
         # displaying the video feed as successive frames
+        time.sleep(0.1)
         cv2.imshow("frame", frame)
 
         # how to close the OAK inference window / stop inference: CTRL+q or CTRL+c

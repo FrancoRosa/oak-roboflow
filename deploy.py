@@ -38,9 +38,10 @@ if __name__ == '__main__':
 
         # setting parameters for depth calculation
         # comment out the following 2 lines out if you're using an OAK without Depth
-        max_depth = np.amax(depth)
+        # max_depth = np.amax(depth)
         # cv2.imshow("depth", depth/max_depth)
         # displaying the video feed as successive frames
+        time.sleep(0.1)
         cv2.imshow("frame", frame)
     
         # how to close the OAK inference window / stop inference: CTRL+q or CTRL+c
