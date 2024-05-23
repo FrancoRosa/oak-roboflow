@@ -3,7 +3,8 @@
 ## First steps
 ```bash
 sudo apt install python3.11-venv
-python3 -m venv venv
+python3 -m venv venv     # create virtual environment
+source venv/bin/activate # activate virtual environment
 pip install -r requirements.txt
 python3 -m depthai_viewer
 ```
